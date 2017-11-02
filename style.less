@@ -1,0 +1,187 @@
+/*
+Preg por que display inlineblock me muestra las recetas en escalera en .recipes
+
+Como anadir salto de linea en css
+
+
+*/
+
+        //Colors
+            //Brown Tones
+                @lightBrown: #FFDC9B;
+                @medBrown: #FFC250;
+                @darkBrown:#B27A1C;
+
+            //Blue Tones
+                @lightBlue: #B3D5FF;
+                @medBlue: #4194FF;
+                @darkBlue: #0F5AB2;
+
+        //Sizes(px);
+            @nospace: 0px;
+
+        //Fonts
+
+
+        //Text Sizes
+            @bigTextSize:30px;
+    
+//I had a problem with inline, was showed inline but not aligned  (the botton margin  horizontal for the three recipes boxes but the top margin not). So I defined all the positions of the recipes boxes like absolute.
+#section1 {
+    display:center;
+    text-align: center;
+}
+
+div[id^="rec1"] {
+    position:absolute;
+    top: 300px;
+}
+
+
+#rec1a {
+  
+}
+
+
+#rec1b {
+    left: 32%;
+    
+}
+
+#rec1c {
+    left: 64%;
+    
+}
+
+
+
+//General Style Attributes for all Recipes Boxes (fixed and random)
+.recipes {
+    border: 1px solid black;
+    text-align: center;
+    width: 28%;
+    height:900px;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+        
+
+        .recImages, .recImages2 {
+                max-width: 70%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-radius: 15px;
+            }
+
+        h1 {
+            font-size: @bigTextSize;
+
+        }
+        h4 {
+            padding-top: @nospace;
+            padding-bottom:@nospace;
+            margin-top: @nospace;
+            margin-bottom:@nospace;
+        }
+
+        
+        h5{
+            margin-top:10px;
+        }
+   
+        .time::before { //I forgot to add the title to this so I found this way to do that.
+            content: "Time: "
+        }
+    
+        
+        .difficulty::before {
+            content: "Difficulty: "        
+        }
+        .ingredients::before {
+            content: "Ingredients: " 
+
+        }
+
+
+        .steps::before {
+            content: "Steps: "        
+        }
+    
+        .line2 {
+            margin:auto 20%;
+            border-radius: 30px;
+        }
+
+
+       
+}
+
+//Fixed recipes in brown tones
+                div[id^=rec1] {
+                background-color: @lightBrown;
+                    h1 {
+                        background-color: @darkBrown;
+
+                    }
+                    h4{
+                        background-color: @medBrown;
+
+                    }
+
+            }
+
+//Again the same problem, so everything is "absolute"
+#section2 {
+    display:center;
+    
+}
+
+div[id^="rec2"] {
+    position:absolute;
+    top: 1300px;
+}
+
+
+#rec2a {
+  
+}
+
+
+#rec2b {
+    left: 32%;
+    
+}
+
+#rec2c {
+    left: 64%;
+    
+}
+    
+
+//Random recipes in blue tones
+
+            div[id^=rec2] {
+                background-color: @lightBlue;
+               
+                h1 {
+                        background-color: @darkBlue;
+
+                }
+                h4{
+                        background-color: @medBlue;
+
+                }
+
+
+            }
+
+
+
+footer {
+    position:absolute;
+    top:2220px;
+    right: 0px;
+}
+
+
